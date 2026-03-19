@@ -1,5 +1,5 @@
 [package]
-name = "quit-all"
+name = "napalm"
 version = "0.1.0"
 edition = "2021"
 

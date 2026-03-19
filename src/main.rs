@@ -18,7 +18,7 @@ struct Config {
 
 fn default_config_path() -> PathBuf {
     let home = std::env::var("HOME").expect("HOME not set");
-    PathBuf::from(home).join(".config").join("quit-all.json")
+    PathBuf::from(home).join(".config").join("napalm.json")
 }
 
 fn load_config(path: &Path) -> Config {
@@ -144,26 +144,26 @@ mod tests {
 
     #[test]
     fn parse_args_no_flags() {
-        let args = vec!["quit-all".to_string()];
+        let args = vec!["napalm".to_string()];
         assert_eq!(parse_args(&args), (false, false));
     }
 
     #[test]
     fn parse_args_force() {
-        let args = vec!["quit-all".to_string(), "--force".to_string()];
+        let args = vec!["napalm".to_string(), "--force".to_string()];
         assert_eq!(parse_args(&args), (true, false));
     }
 
     #[test]
     fn parse_args_dry_run() {
-        let args = vec!["quit-all".to_string(), "--dry-run".to_string()];
+        let args = vec!["napalm".to_string(), "--dry-run".to_string()];
         assert_eq!(parse_args(&args), (false, true));
     }
 
     #[test]
     fn parse_args_both_flags() {
         let args = vec![
-            "quit-all".to_string(),
+            "napalm".to_string(),
             "--force".to_string(),
             "--dry-run".to_string(),
         ];

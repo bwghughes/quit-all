@@ -1,9 +1,9 @@
 #!/bin/bash
 set -euo pipefail
 
-APP_NAME="Quit All"
-BUNDLE_ID="com.quit-all.app"
-EXECUTABLE="quit-all"
+APP_NAME="Napalm"
+BUNDLE_ID="com.napalm.app"
+EXECUTABLE="napalm"
 VERSION="0.1.0"
 APP_DIR="target/release/${APP_NAME}.app"
 

@@ -1,10 +1,10 @@
 ```
-                 ██╗ ██╗      █████╗ ██╗     ██╗
-   __ _ _   _  ╚██╗██╔╝     ██╔══██╗██║     ██║
-  / _` | | | |  ╚███╔╝█████╗███████║██║     ██║
- | (_| | |_| |  ██╔██╗╚════╝██╔══██║██║     ██║
-  \__, |\__,_| ██╔╝ ██╗     ██║  ██║███████╗███████╗
-     |_|       ╚═╝  ╚═╝     ╚═╝  ╚═╝╚══════╝╚══════╝
+ ███╗   ██╗ █████╗ ██████╗  █████╗ ██╗     ███╗   ███╗
+ ████╗  ██║██╔══██╗██╔══██╗██╔══██╗██║     ████╗ ████║
+ ██╔██╗ ██║███████║██████╔╝███████║██║     ██╔████╔██║
+ ██║╚██╗██║██╔══██║██╔═══╝ ██╔══██║██║     ██║╚██╔╝██║
+ ██║ ╚████║██║  ██║██║     ██║  ██║███████╗██║ ╚═╝ ██║
+ ╚═╝  ╚═══╝╚═╝  ╚═╝╚═╝     ╚═╝  ╚═╝╚══════╝╚═╝     ╚═╝
 ```
 
 A fast, no-nonsense macOS command-line tool that quits all running GUI applications in one shot. Written in Rust.
@@ -15,20 +15,20 @@ A fast, no-nonsense macOS command-line tool that quits all running GUI applicati
 
 ```bash
 cargo build --release
-cp target/release/quit-all /usr/local/bin/
+cp target/release/napalm /usr/local/bin/
 ```
 
 ## Usage
 
 ```bash
-quit-all              # Gracefully quit all apps
-quit-all --force      # Force-terminate all apps (no save prompts)
-quit-all --dry-run    # Preview what would be quit
+napalm              # Gracefully quit all apps
+napalm --force      # Force-terminate all apps (no save prompts)
+napalm --dry-run    # Preview what would be quit
 ```
 
 ## Config
 
-Apps can be whitelisted via `~/.config/quit-all.json`:
+Apps can be whitelisted via `~/.config/napalm.json`:
 
 ```json
 {
